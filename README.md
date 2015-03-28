@@ -15,7 +15,7 @@ Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジ�
 - [yii2-bootstrap](https://github.com/yiijan/yii2-bootstrap)
 - [yii2-codeception](https://github.com/yiijan/yii2-codeception)
 - [yii2-debug](https://github.com/yiijan/yii2-debug)
-- [yii2-elasticserch](https://github.com/yiijan/yii2-elasticserch)
+- [yii2-elasticsearch](https://github.com/yiijan/yii2-elasticsearch)
 - [yii2-faker](https://github.com/yiijan/yii2-faker)
 - [yii2-gii](https://github.com/yiijan/yii2-gii)
 - [yii2-jui](https://github.com/yiijan/yii2-jui)
