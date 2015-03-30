@@ -6,24 +6,27 @@ Yii 2 日本語ドキュメント
 Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジトリに分散して格納されています。
 この yiijan organization においては、それらのレポジトリを本家からフォークしてホストしています。
 
-- [yii2](https://github.com/yiijan/yii2) ... フレームワーク本体
-    - フレームワークのメッセージ ... framework/messages/ja/yii.php
-    - ユーザガイド ... docs/guide-ja/*
-    - 開発者ガイド ... docs/internals-ja/*
-- [yii2-app-advanced](https://github.com/yiijan/yii2-app-advanced)
-- [yii2-authclient](https://github.com/yiijan/yii2-authclient)
-- [yii2-bootstrap](https://github.com/yiijan/yii2-bootstrap)
-- [yii2-codeception](https://github.com/yiijan/yii2-codeception)
-- [yii2-debug](https://github.com/yiijan/yii2-debug)
-- [yii2-elasticsearch](https://github.com/yiijan/yii2-elasticsearch)
-- [yii2-faker](https://github.com/yiijan/yii2-faker)
-- [yii2-gii](https://github.com/yiijan/yii2-gii)
-- [yii2-jui](https://github.com/yiijan/yii2-jui)
-- [yii2-twig](https://github.com/yiijan/yii2-twig)
-- [yii2-mongodb](https://github.com/yiijan/yii2-mongodb)
-- [yii2-redis](https://github.com/yiijan/yii2-redis)
-- [yii2-smarty](https://github.com/yiijan/yii2-smarty)
-- [yii2-sphinx](https://github.com/yiijan/yii2-sphinx)
+- フレームワーク本体
+    - [yii2](https://github.com/yiijan/yii2)
+        - フレームワークのメッセージ ... framework/messages/ja/yii.php
+        - ユーザガイド ... docs/guide-ja/*
+        - 開発者ガイド ... docs/internals-ja/*
+- アプリケーションテンプレート
+    - [yii2-app-advanced](https://github.com/yiijan/yii2-app-advanced)
+- 公式エクステンション
+    - [yii2-authclient](https://github.com/yiijan/yii2-authclient)
+    - [yii2-bootstrap](https://github.com/yiijan/yii2-bootstrap)
+    - [yii2-codeception](https://github.com/yiijan/yii2-codeception)
+    - [yii2-debug](https://github.com/yiijan/yii2-debug)
+    - [yii2-elasticsearch](https://github.com/yiijan/yii2-elasticsearch)
+    - [yii2-faker](https://github.com/yiijan/yii2-faker)
+    - [yii2-gii](https://github.com/yiijan/yii2-gii)
+    - [yii2-jui](https://github.com/yiijan/yii2-jui)
+    - [yii2-mongodb](https://github.com/yiijan/yii2-mongodb)
+    - [yii2-redis](https://github.com/yiijan/yii2-redis)
+    - [yii2-smarty](https://github.com/yiijan/yii2-smarty)
+    - [yii2-sphinx](https://github.com/yiijan/yii2-sphinx)
+    - [yii2-twig](https://github.com/yiijan/yii2-twig)
 
 この **yii2-ja** レポジトリは、これらの日本語翻訳全体に関わる問題を扱います。
 
@@ -100,7 +103,7 @@ Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジ�
     git pull upstream master
 
 このステップは、プルリクエストを出す前にあなたのブランチが最新のコードを持っていることを確実にするためのものです。
-こうすると、Yii 開発チームがワンクリックであなたの変更をマージすることが確実に出来るようになります。
+こうすると、Yii 開発チームが確実にワンクリックであなたの変更をマージすることが出来るようになります。
 
 ### 9. yiijan にプッシュする
 
@@ -122,8 +125,15 @@ github の yiijan のレポジトリに入って、本家に対して "Pull Requ
 
 ### 12. クリーンアップする
 
-あなたのプルリクエストが受け入れられた後、あなたが作業してきたブランチをローカルレポジトリおよび yiijan から削除することが出来ます。
+あなたのプルリクエストが受け入れられた後、あなたが作業してきたブランチをローカルおよび yiijan のレポジトリから削除することが出来ます。
 
     git checkout master
     git branch -D docs-ja-zyz-translation
     git push origin --delete docs-ja-zyz-translation
+
+## 本家に直接のプルリクエストをすることについて
+
+本家に直接のプルリクエストをすることは、あなたの権利です。
+誰もそれを制止する権利を持ちません。
+また、何でもかんでも、一緒にやらなければならない訳でもないでしょう。
+あなたの好きなやり方で yii プロジェクトに参画して下さい。
