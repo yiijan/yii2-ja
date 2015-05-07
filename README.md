@@ -137,3 +137,52 @@ github の yiijan のレポジトリに入って、本家に対して "Pull Requ
 誰もそれを制止する権利を持ちません。
 また、何でもかんでも、一緒にやらなければならない訳でもないでしょう。
 あなたの好きなやり方で yii プロジェクトに参画して下さい。
+
+
+## 作業を補助するバッチファイル
+
+Windows では、以下のバッチファイルを作業の補助として使用することが出来ます。
+
+### check-docs.bat
+
+特定のレポジトリについて、翻訳の追加や更新が必要な文書(またはその個所)を抽出します。
+
+対象とするレポジトリの名前を引数として与えてください。例えば、
+```
+check-docs.bat yii2-gii
+```
+
+ただし、対象となるレポジトリは、この yii2-ja レポジトリを格納するディレクトリの兄弟ディレクトリにある必要があります。
+
+結果は、`translation-check` ディレクトリに `<repo-name>-guide-ja-report.html` として格納されます。
+
+このバッチファイルは、内部的に、yii/build/build translation コマンドを使用しています。
+詳細については、[翻訳ワークフロー](https://github.com/yiisoft/yii2/blob/master/docs/internals-ja/translation-workflow.md) を参照してください。
+
+### check-all-docs.bat
+
+`repo-list.txt` に列挙されたレポジトリ全てについて、check-docs.bat を実行します。
+
+### check-msg.bat
+
+yii2 レポジトリのソースから、翻訳の対象となるメッセージを抽出して、`yii2/framework/messages/ja/yii2.php` ファイルを更新します。
+`config-ja.php` を構成情報として参照します。
+
+このバッチファイルは、内部的に、message/extract コマンドを使用しています。
+詳細については、[翻訳ワークフロー](https://github.com/yiisoft/yii2/blob/master/docs/internals-ja/translation-workflow.md) を参照してください。
+
+### update-repo.bat
+
+特定のレポジトリについて、ローカルおよび origin の master ブランチを upstream の master ブランチで更新します。
+
+対象とするレポジトリの名前を引数として与えてください。例えば、
+```
+update-repo.bat yii2-gii
+```
+
+ただし、対象となるレポジトリは、この yii2-ja レポジトリを格納するディレクトリの兄弟ディレクトリにある必要があります。
+
+### update-all-repos.bat
+
+`repo-list.txt` に列挙されたレポジトリ全てについて、update-repo.bat を実行します。
+
