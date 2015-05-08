@@ -12,4 +12,7 @@ if "%listfile%" == "" (
 
 for /F %%a in (%listfile%) do call .\check-docs.bat %%a
 
+call .\check-internals.bat
+
 echo;
+pause

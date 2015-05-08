@@ -139,7 +139,7 @@ github の yiijan のレポジトリに入って、本家に対して "Pull Requ
 あなたの好きなやり方で yii プロジェクトに参画して下さい。
 
 
-## 作業を補助するバッチファイル
+## 作業を補助するバッチファイル (Windows)
 
 Windows では、以下のバッチファイルを作業の補助として使用することが出来ます。
 
@@ -159,9 +159,20 @@ check-docs.bat yii2-gii
 このバッチファイルは、内部的に、yii/build/build translation コマンドを使用しています。
 詳細については、[翻訳ワークフロー](https://github.com/yiisoft/yii2/blob/master/docs/internals-ja/translation-workflow.md) を参照してください。
 
+### check-internals.bat
+
+yii2/docs/internals-ja について、翻訳の追加や更新が必要な文書(またはその個所)を抽出します。
+
+このバッチファイルは引数を取りません。
+```
+check-internals.bat
+```
+
+結果は、`translation-check` ディレクトリに `yii2-internals-ja-report.html` として格納されます。
+
 ### check-all-docs.bat
 
-`repo-list.txt` に列挙されたレポジトリ全てについて、check-docs.bat を実行します。
+`repo-list.txt` に列挙されたレポジトリ全てについて、check-docs.bat を実行し、さらに check-internals.bat を実行します。
 
 ### check-msg.bat
 
