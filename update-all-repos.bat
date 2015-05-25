@@ -13,3 +13,4 @@ if "%listfile%" == "" (
 for /F %%a in (%listfile%) do call .\update-repo.bat %%a
 
 echo;
+pause
