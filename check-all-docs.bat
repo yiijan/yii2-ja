@@ -10,9 +10,7 @@ if "%listfile%" == "" (
   set listfile=.\repo-list.txt
 )
 
-for /F %%a in (%listfile%) do call .\check-docs.bat %%a
-
-call .\check-internals.bat
+for /F %%a in (%listfile%) do php .\check-docs %%a
 
 echo;
 pause

@@ -29,13 +29,14 @@ git.exe pull "upstream" master
 @echo Pushing to origin/master ...
 git.exe push "origin" master:master
 
+@echo Repositories updated successfully.
+
 popd
 
-@echo -----------------------------------------------------
-@echo Updated successfully.
+php .\check-docs %repo%
+
 goto exit
 :err_exit
-@echo -----------------------------------------------------
-@echo Updating failed.
+@echo Failed to update repositories.
 pause
 :exit
