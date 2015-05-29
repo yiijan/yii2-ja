@@ -15,7 +15,7 @@ if (!file_exists($repoDir)) {
 $curDir = getcwd();
 chdir($repoDir);
 
-echo "Starting to check the guide of $repo ...\n";
+echo "Checking the guide of $repo ...\n";
 
 $outFile = "../yii2-ja/translation-check/$repo.html";
 $tempFile = "../yii2-ja/translation-check/temp.html";
@@ -33,12 +33,13 @@ if ($outContent === false) {
 }
 
 if ($repo === 'yii2') {
-    echo "Starting to check the internals of $repo ...\n";
+    echo "Checking the internal documentss of $repo ...\n";
 
     $outFile = "../yii2-ja/translation-check/internals.html";
 
     exec("php ../yii2/build/build translation docs/internals docs/internals-ja internals > $tempFile");
 
+    $outContent = @file_get_contents($outFile);
     if ($outContent === false) {
         copy($tempFile, $outFile);
     } else {
@@ -49,6 +50,6 @@ if ($repo === 'yii2') {
     }
 }
 
-echo "Translation checked successfully.\n";
+echo "Check done successfully.\n";
 
 chdir($curDir);
