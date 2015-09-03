@@ -21,6 +21,7 @@ Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジ�
     - [yii2-elasticsearch](https://github.com/yiijan/yii2-elasticsearch)
     - [yii2-faker](https://github.com/yiijan/yii2-faker)
     - [yii2-gii](https://github.com/yiijan/yii2-gii)
+    - [yii2-httpclient](https://github.com/yiijan/yii2-httpclient)
     - [yii2-jui](https://github.com/yiijan/yii2-jui)
     - [yii2-mongodb](https://github.com/yiijan/yii2-mongodb)
     - [yii2-redis](https://github.com/yiijan/yii2-redis)

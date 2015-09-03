@@ -7,6 +7,7 @@ yii2-debug
 yii2-elasticsearch
 yii2-faker
 yii2-gii
+yii2-httpclient
 yii2-jui
 yii2-mongodb
 yii2-redis
