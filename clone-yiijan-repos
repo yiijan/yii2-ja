@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# clones yiijan working repositories and sets upstream urls
+
+listfile=${1:-./repo-list.txt}
+
+for repo in `cat $listfile`; do
+    pushd .. > /dev/null
+    if [ ! -e $repo ]; then
+        git clone git@github.com:yiijan/${repo}.git
+        pushd ${repo} > /dev/null
+        git remote add upstream git@github.com:yiisoft/${repo}.git
+        # composer install
+        popd > /dev/null
+    fi
+    popd > /dev/null
+done
