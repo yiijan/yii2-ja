@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# check all docs-ja translations against the corresponding original docs.
+# argument %1 : repository list file. defaults to "repo-list.txt"
+
+listfile=${1:-./repo-list.txt}
+
+for repo in `cat $listfile`; do
+    ./check-docs $repo
+done
