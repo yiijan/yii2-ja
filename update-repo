@@ -29,8 +29,8 @@ echo "Checking out master ..."
 git checkout master
 echo "Pulling from upstream/master ..."
 git pull "upstream" master
-#echo "Pushing to origin/master ..."
-#git push "origin" master:master
+echo "Pushing to origin/master ..."
+git push "origin" master:master
 
 echo "Repositories updated successfully."
 
