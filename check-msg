@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# extracts framework messages
+
+../yii2/framework/yii message/extract ./config-ja.php

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# updates the local and the "origin" repos with the "upstream" repo
+# argument $1 : repository name, e.g. "yii2", "yii2-gii", that should
+#               locate in the sibling directory of "yii2-ja"
+
+function err_exit() {
+  echo "Failed to update repositories."
+  exit 1
+}
+
+repo=$1
+if [ -z "$repo" ]; then
+  echo "Specify the repository to update."
+  err_exit
+fi
+
+if [ ! -e "../${repo}" ]; then
+  echo "Repository ${repo} doesn't exist."
+  err_exit
+fi
+
+echo "Starting to update %repo% repositories"
+echo "-----------------------------------------------------"
+
+pushd ../${repo} > /dev/null
+
+echo "Checking out master ..."
+git checkout master
+echo "Pulling from upstream/master ..."
+git pull "upstream" master
+#echo "Pushing to origin/master ..."
+#git push "origin" master:master
+
+echo "Repositories updated successfully."
+
+popd > /dev/null
+
+./check-docs ${repo}

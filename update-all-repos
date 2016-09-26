@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# updates all the local and the "origin" repos with the corresponding "upstream" repo
+# argument %1 : repository list file. defaults to "repo-list.txt"
+
+listfile=${1:-./repo-list.txt}
+
+for repo in `cat $listfile`; do
+    ./update-repo $repo
+done
