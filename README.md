@@ -145,19 +145,20 @@ github の yiijan のレポジトリに入って、本家に対して "Pull Requ
 ## 作業を補助するスクリプト
 
 以下のスクリプトを作業の補助として使用することが出来ます。
+(各ツールにはシェルスクリプトバージョンと Windows `*.bat` ファイルバージョンがあります)
 
 ### clone-yiijan-repos
 
 GitHub の yiijan グループから、`repo-list.txt` に列挙されたレポジトリをクローンします。
 そのとき同時に、upstream に yiisoft 本家のレポジトリを指定します。
 
-### check-docs (PHP スクリプト)
+### check-docs
 
 特定のレポジトリについて、翻訳の追加や更新が必要な文書(またはその個所)を抽出します。
 
 対象とするレポジトリの名前を引数として与えてください。例えば、
 ```
-php check-docs yii2-gii
+./check-docs yii2-gii
 ```
 
 ただし、対象となるレポジトリは、この yii2-ja レポジトリを格納するディレクトリの兄弟ディレクトリにある必要があります。
@@ -171,11 +172,11 @@ php check-docs yii2-gii
 
 > 情報: `yii2` レポジトリに対しては、開発者用内部文書の翻訳も追加でチェックします。結果の html ファイルは `internals.html` です。
 
-### check-all-docs.bat (Windows バッチファイル)
+### check-all-docs
 
 `repo-list.txt` に列挙されたレポジトリ全てについて、check-docs を実行します。
 
-### check-msg.bat (Windows バッチファイル)
+### check-msg
 
 yii2 レポジトリのソースから、翻訳の対象となるメッセージを抽出して、`yii2/framework/messages/ja/yii2.php` ファイルを更新します。
 `config-ja.php` を構成情報として参照します。
@@ -183,7 +184,7 @@ yii2 レポジトリのソースから、翻訳の対象となるメッセージ
 このバッチファイルは、内部的に、message/extract コマンドを使用しています。
 詳細については、[翻訳ワークフロー](https://github.com/yiisoft/yii2/blob/master/docs/internals-ja/translation-workflow.md) を参照してください。
 
-### update-repo.bat (Windows バッチファイル)
+### update-repo
 
 特定のレポジトリについて、ローカルおよび origin の master ブランチを upstream の master ブランチで更新します。
 そして、同時に、そのレポジトリに対して `check-docs` スクリプトを実行します。
@@ -195,7 +196,7 @@ update-repo.bat yii2-gii
 
 ただし、対象となるレポジトリは、この yii2-ja レポジトリを格納するディレクトリの兄弟ディレクトリにある必要があります。
 
-### update-all-repos.bat (Windows バッチファイル)
+### update-all-repos
 
-`repo-list.txt` に列挙されたレポジトリ全てについて、update-repo.bat を実行します。
+`repo-list.txt` に列挙されたレポジトリ全てについて、update-repo を実行します。
 
