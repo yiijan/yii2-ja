@@ -9,22 +9,28 @@ Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジ�
 - フレームワーク本体
     - [yii2](https://github.com/yiijan/yii2)
         - フレームワークのメッセージ ... framework/messages/ja/yii.php
-        - ユーザガイド ... docs/guide-ja/*
+        - ユーザ・ガイド ... docs/guide-ja/*
         - 開発者ガイド ... docs/internals-ja/*
-- アプリケーションテンプレート
+- アプリケーション・テンプレート
     - [yii2-app-advanced](https://github.com/yiijan/yii2-app-advanced)
 - 公式エクステンション
     - [yii2-authclient](https://github.com/yiijan/yii2-authclient)
     - [yii2-bootstrap](https://github.com/yiijan/yii2-bootstrap)
+    - [yii2-bootstrap4](https://github.com/yiijan/yii2-bootstrap4)
     - [yii2-codeception](https://github.com/yiijan/yii2-codeception)
+    - [yii2-collection](https://github.com/yiijan/yii2-collection)
     - [yii2-debug](https://github.com/yiijan/yii2-debug)
     - [yii2-elasticsearch](https://github.com/yiijan/yii2-elasticsearch)
     - [yii2-faker](https://github.com/yiijan/yii2-faker)
     - [yii2-gii](https://github.com/yiijan/yii2-gii)
     - [yii2-httpclient](https://github.com/yiijan/yii2-httpclient)
+    - [yii2-imagine](https://github.com/yiijan/yii2-imagine)
     - [yii2-jui](https://github.com/yiijan/yii2-jui)
+    - [yii2-maskedinput](https://github.com/yiijan/yii2-maskedinput)
     - [yii2-mongodb](https://github.com/yiijan/yii2-mongodb)
+    - [yii2-queue](https://github.com/yiijan/yii2-queue)
     - [yii2-redis](https://github.com/yiijan/yii2-redis)
+    - [yii2-shell](https://github.com/yiijan/yii2-shell)
     - [yii2-smarty](https://github.com/yiijan/yii2-smarty)
     - [yii2-sphinx](https://github.com/yiijan/yii2-sphinx)
     - [yii2-twig](https://github.com/yiijan/yii2-twig)
@@ -32,9 +38,9 @@ Yii 2 のドキュメントとその日本語翻訳はいくつかのレポジ�
 この **yii2-ja** レポジトリは、これらの日本語翻訳全体に関わる問題を扱います。
 
 
-## 翻訳作業のワークフロー
+## 翻訳作業のワーク・フロー
 
-翻訳作業については、原則として、次のワークフローを想定しています。
+翻訳作業については、原則として、次のワーク・フローを想定しています。
 
 ### 1. yiijan に加わる
 
@@ -78,7 +84,7 @@ yiijan のフォークを使う場合は、ここまでの準備を `clone-yiija
 ### 5. 現在の master ブランチを基にして、新しいブランチを作成する
 
 > これは非常に重要です。
-> なぜなら、master ブランチを使うと、そのレポジトリからは一つ以上のプルリクエストを送信することが出来なくなるからです。
+> なぜなら、master ブランチを使うと、そのレポジトリからは一つ以上のプル・リクエストを送信することが出来なくなるからです。
 
 独立した修正や変更は、各々、それ自身のブランチに入れるべきです。
 ブランチの名前は説明的なものにしてください。 例えば、
@@ -92,12 +98,12 @@ yiijan のフォークを使う場合は、ここまでの準備を `clone-yiija
 
 ### 7. コミットする
 
-以下のコマンドを使って、コミットしたいファイルや変更をステージングエリアに追加します。
+以下のコマンドを使って、コミットしたいファイルや変更をステージング・エリアに追加します。
 
     git add path/to/my/file.md
 
-説明的なコミットメッセージを付けて修正をコミットしてください。
-このとき、余計な自動テストをスキップするために、コミットメッセージに `[ci skip]` を含めることが推奨されます。
+説明的なコミット・メッセージを付けて修正をコミットしてください。
+このとき、余計な自動テストをスキップするために、コミット・メッセージに `[ci skip]` を含めることが推奨されます。
 
     git commit -m "docs-ja-xyz.md typo fixed [ci skip]"
 
@@ -105,8 +111,8 @@ yiijan のフォークを使う場合は、ここまでの準備を `clone-yiija
 
     git pull upstream master
 
-このステップは、プルリクエストを出す前にあなたのブランチが最新のコードを持っていることを確実にするためのものです。
-こうすると、Yii 開発チームが確実にワンクリックであなたの変更をマージすることが出来るようになります。
+このステップは、プル・リクエストを出す前にあなたのブランチが最新のコードを持っていることを確実にするためのものです。
+こうすると、Yii 開発チームが確実にワン・クリックであなたの変更をマージすることが出来るようになります。
 
 ### 9. yiijan にプッシュする
 
@@ -118,13 +124,13 @@ yiijan のフォークを使う場合は、ここまでの準備を `clone-yiija
 
 上記の 2. の段階で設定したリモートの名称に従って、作業したブランチを yiijan にプッシュしてください。
 
-### 10. yiijan から 本家に対してプルリクエストを発行する
+### 10. yiijan から 本家に対してプル・リクエストを発行する
 
 github の yiijan のレポジトリに入って、本家に対して "Pull Request" を発行します。
 
-### 11. yii 開発チームがあなたのブランチをメインブランチにマージする
+### 11. yii 開発チームがあなたのブランチをメイン・ブランチにマージする
 
-ドキュメントの日本語翻訳に限定されている限り、プルリクエストが却下される可能性はまずありません。
+ドキュメントの日本語翻訳に限定されている限り、プル・リクエストが却下される可能性はまずありません。
 
 ### 12. クリーンアップする
 
@@ -134,18 +140,42 @@ github の yiijan のレポジトリに入って、本家に対して "Pull Requ
     git branch -D docs-ja-zyz-translation
     git push origin --delete docs-ja-zyz-translation
 
-## 本家に直接のプルリクエストをすることについて
+## 本家に直接のプル・リクエストをすることについて
 
-本家に直接のプルリクエストをすることは、あなたの権利です。
+本家に直接のプル・リクエストをすることは、あなたの権利です。
 誰もそれを制止する権利を持ちません。
 また、何でもかんでも、一緒にやらなければならない訳でもないでしょう。
 あなたの好きなやり方で yii プロジェクトに参画して下さい。
 
 
+## 翻訳スタイル
+
+### 片仮名のテクニカル・タームのスタイル
+
+yiijan では、片仮名のテクニカル・タームにおいて "・" (中黒) をデリミタとしています。
+例えば、
+
+- application component : アプリケーション・コンポーネント
+- active record model class : アクティブ・レコード・モデル・クラス
+
+また、語末の長音記号 "ー" は原則として省略しています。
+例えば、
+
+- web server : ウェブ・サーバ
+- html helper : html ヘルパ
+
+### 原文と訳文の行数を揃える
+
+翻訳作業上、原文と訳文を比較しなければならない事がよくあります。
+例えば、原文において修正や追加があった場合に、訳文の該当場所を探し出すことが必要になります。
+
+このため、パラグラフ単位で訳文の行数を原文の行数と同じになるように調整して、
+原文と訳文の突き合わせが楽に出来るようにしています。
+
 ## 作業を補助するスクリプト
 
 以下のスクリプトを作業の補助として使用することが出来ます。
-(各ツールにはシェルスクリプトバージョンと Windows `*.bat` ファイルバージョンがあります)
+(各ツールにはシェル・スクリプト・バージョンと Windows `*.bat` ファイル・バージョンがあります)
 
 ### clone-yiijan-repos
 
@@ -181,7 +211,7 @@ GitHub の yiijan グループから、`repo-list.txt` に列挙されたレポ�
 yii2 レポジトリのソースから、翻訳の対象となるメッセージを抽出して、`yii2/framework/messages/ja/yii2.php` ファイルを更新します。
 `config-ja.php` を構成情報として参照します。
 
-このバッチファイルは、内部的に、message/extract コマンドを使用しています。
+このバッチ・ファイルは、内部的に、message/extract コマンドを使用しています。
 詳細については、[翻訳ワークフロー](https://github.com/yiisoft/yii2/blob/master/docs/internals-ja/translation-workflow.md) を参照してください。
 
 ### update-repo
