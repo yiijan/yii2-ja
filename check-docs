@@ -34,7 +34,7 @@ if ($outContent === false) {
 }
 
 if ($repo === 'yii2') {
-    echo "Checking the internal documentss of $repo ...\n";
+    echo "Checking the internal documents of $repo ...\n";
 
     $outFile = "../yii2-ja/translation-check/internals.html";
 
