@@ -33,10 +33,10 @@ if ($outContent === false) {
     }
 }
 
-if ($repo === 'yii2') {
+if ($repo === 'yii2' || $repo === 'yii-core') {
     echo "Checking the internal documents of $repo ...\n";
 
-    $outFile = "../yii2-ja/translation-check/internals.html";
+    $outFile = "../yii2-ja/translation-check/$repo-internals.html";
 
     exec("php ../yii2/build/build translation docs/internals docs/internals-ja internals > $tempFile");
 
