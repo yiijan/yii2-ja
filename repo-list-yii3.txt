@@ -1,5 +1,6 @@
 yii-core
 yii-rest
+yii-bootstrap3
 yii-bootstrap4
 yii-masked-input
 yii-debug
